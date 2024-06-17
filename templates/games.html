@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Board Games</title>
+        <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    </head>
+
+    <body>
+        <h1>Board Games</h1>
+        <div id="game-info">
+            {{template "game-info.html" .}}
+        </div>
+        <button hx-get="/change-game" hx-target="#game-info" hx-swap="outerHTML">Change Game</button>
+    </body>
+</html>
